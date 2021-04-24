@@ -1,7 +1,12 @@
 {{page-title "PWA APP"}}
 
-<LinkTo @route="index"><h1 class="header">HEADER</h1></LinkTo>
+<div class="app-wrapper">
+  <LinkTo @route="index" {{on "click" (fn this.toggleMenu true)}}><h1 class="header">HEADER</h1></LinkTo>
 
-{{outlet}}
+  {{outlet}}
 
-<Menu />
+  <Menu
+    @showMenu={{this.showMenu}}
+    @onClickItem={{this.toggleMenu}}
+  />
+</div>

@@ -3,6 +3,11 @@
   flex-wrap: wrap;
   align-items: center;
   height: calc(100vh - #{$headers-sum});
+  position: absolute;
+  width: 100%;
+  left: -100vw;
+  top: $headers-sum;
+  transition: left $menu-transition-time;
 
   .notes {
     background-color: $color-notes;
@@ -50,4 +55,15 @@
       opacity: 0.4;
     }
   }
+
+  &.-show {
+    left: 0vw;
+    transition: left $menu-transition-time;
+  }
+}
+
+.menu-switcher {
+  position: absolute;
+  left: 24px;
+  top: 24px;
 }

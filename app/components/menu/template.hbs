@@ -1,6 +1,10 @@
-<div class="menu">
+<div role="button" class="menu {{if @showMenu "-show"}}" {{on "click" (fn @onClickItem false)}}>
   <LinkTo class="notes" @route="notes">NOTES</LinkTo>
   <LinkTo class="poi" @route="poi">POI</LinkTo>
   <LinkTo class="qr-scanner" @route="qr-scanner">QR SCANNER</LinkTo>
   <LinkTo class="spirit-level" @route="spirit-level">SPIRIT LEVEL</LinkTo>
+</div>
+
+<div class="menu-switcher">
+  <button type="button" {{on "click" this.handleSwitcherMenu}} disabled={{not this.showSwitcher}}>Toggle menu</button>
 </div>
