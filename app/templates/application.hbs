@@ -1,7 +1,12 @@
-{{page-title "PwaApp"}}
+{{page-title "PWA APP"}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div class="app-wrapper">
+  <LinkTo @route="index" {{on "click" (fn this.toggleMenu true)}}><h1 class="header">HEADER</h1></LinkTo>
 
-{{outlet}}
+  {{outlet}}
+
+  <Menu
+    @showMenu={{this.showMenu}}
+    @onClickItem={{this.toggleMenu}}
+  />
+</div>

@@ -1,0 +1,76 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: calc(100vh - #{$headers-sum});
+  position: absolute;
+  width: 100%;
+  left: -100vw;
+  top: $headers-sum;
+  transition: left $menu-transition-time;
+
+  .notes {
+    background-color: $color-notes;
+  }
+
+  .poi {
+    background-color: $color-poi;
+  }
+
+  .qr-scanner {
+    background-color: $color-qr-scanner;
+  }
+
+  .spirit-level {
+    background-color: $color-spirit-level;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    height: calc(50vh - #{$headers-sum / 2});
+    position: relative;
+    font-size: 2em;
+    text-align: center;
+
+    &.active::before {
+      opacity: 0.3;
+    }
+
+    &::before {
+      content: "";
+      background-color: black;
+      opacity: 0;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      bottom: 12px;
+      left: 12px;
+      border-radius: 24px;
+    }
+
+    &:hover::before {
+      opacity: 0.4;
+    }
+  }
+
+  &.-show {
+    left: 0vw;
+    transition: left $menu-transition-time;
+  }
+}
+
+.menu-switcher {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  padding: 12px;
+  opacity: 1;
+  transition: opacity 300ms;
+
+  &.-hide {
+    opacity: 0;
+  }
+}

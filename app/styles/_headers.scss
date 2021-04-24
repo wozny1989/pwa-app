@@ -1,0 +1,32 @@
+.header {
+  height: $h2-header-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1.header {
+  height: $h1-header-height;
+}
+
+h2.header {
+  background-color: $color-bg;
+
+  &.-notes {
+    background-color: $color-notes;
+  }
+
+  &.-poi {
+    background-color: $color-poi;
+  }
+
+  &.-qr-scanner {
+    background-color: $color-qr-scanner;
+  }
+
+  &.-spirit-level {
+    background-color: $color-spirit-level;
+  }
+}
