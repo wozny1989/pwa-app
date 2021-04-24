@@ -66,4 +66,10 @@
   position: absolute;
   left: 24px;
   top: 24px;
+  opacity: 1;
+  transition: opacity 300ms;
+
+  &.-hide {
+    opacity: 0;
+  }
 }

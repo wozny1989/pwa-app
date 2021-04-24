@@ -11,6 +11,8 @@ export default class MenuComponent extends Component {
 
   @action
   handleSwitcherMenu() {
-    this.args.onClickItem(!this.args.showMenu);
+    if (this.showSwitcher) {
+      this.args.onClickItem(!this.args.showMenu);
+    }
   }
 }
