@@ -9,6 +9,10 @@
 
 h1.header {
   height: $h1-header-height;
+
+  img {
+    height: 100%;
+  }
 }
 
 h2.header {

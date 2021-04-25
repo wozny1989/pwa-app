@@ -1,7 +1,11 @@
 {{page-title "PWA APP"}}
 
 <div class="app-wrapper">
-  <LinkTo @route="index" {{on "click" (fn this.toggleMenu true)}}><h1 class="header">HEADER</h1></LinkTo>
+  <LinkTo @route="index" {{on "click" (fn this.toggleMenu true)}}>
+    <h1 class="header">
+      <img src="assets/images/pwa-192.png" alt="pwa">
+    </h1>
+  </LinkTo>
 
   {{outlet}}
 
