@@ -8,6 +8,10 @@ module.exports = function (defaults) {
       bootstrapVersion: 4,
       importBootstrapCSS: false,
     },
+
+    prember: {
+      urls: ['/', '/notes', '/poi', '/qr-scanner', '/spirit-level'],
+    },
   });
 
   return app.toTree();
