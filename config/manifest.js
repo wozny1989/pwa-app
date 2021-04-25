@@ -7,7 +7,7 @@ module.exports = function () {
     description: 'Test PWA Application in Ember.js',
     start_url: '/',
     scope: '/',
-    display: 'fullscreen',
+    display: 'standalone',
     background_color: '#262626',
     theme_color: '#262626',
     icons: [
