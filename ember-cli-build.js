@@ -12,6 +12,10 @@ module.exports = function (defaults) {
     prember: {
       urls: ['/', '/notes', '/poi', '/qr-scanner', '/spirit-level'],
     },
+
+    'asset-cache': {
+      include: ['assets/**/*'],
+    },
   });
 
   return app.toTree();
