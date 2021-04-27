@@ -1,0 +1,11 @@
+<div class="row note">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{@note.title}}</h5>
+        <p class="card-text">{{@note.content}}</p>
+        <button type="button" class="btn btn-danger" {{on "click" @onRemoveClick}}>Remove note</button>
+      </div>
+    </div>
+  </div>
+</div>
