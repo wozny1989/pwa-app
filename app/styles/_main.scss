@@ -19,3 +19,10 @@ a {
 .content-wrapper {
   overflow-x: hidden;
 }
+
+.signal-indicator {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: $color-qr-scanner;
+}
