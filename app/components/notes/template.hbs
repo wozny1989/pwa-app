@@ -3,6 +3,11 @@
   <button class="btn btn-warning" type="button" {{on "click" this.clearAllNotes}}>Clear all notes</button>
 </div>
 
-{{#each this.notes as |note|}}
-  <Notes::Note @note={{note}} @onRemoveClick={{fn this.removeNote note.title}} />
+{{#each this.notes as |note index|}}
+  <Notes::Note
+    @index={{index}}
+    @note={{note}}
+    @onRemoveClick={{this.removeNote}}
+    @editValue={{this.editValue}}
+  />
 {{/each}}
