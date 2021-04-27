@@ -1,0 +1,13 @@
+<div class="d-flex">
+  <button class="btn btn-primary mr-auto" type="button" {{on "click" this.addNote}}>Add note</button>
+  <button class="btn btn-warning" type="button" {{on "click" this.clearAllNotes}}>Clear all notes</button>
+</div>
+
+{{#each this.notes as |note index|}}
+  <Notes::Note
+    @index={{index}}
+    @note={{note}}
+    @onRemoveClick={{this.removeNote}}
+    @editValue={{this.editValue}}
+  />
+{{/each}}

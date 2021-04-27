@@ -1,0 +1,11 @@
+<div class="row note">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 role="button" name="title" class="card-title" {{on "keyup" (fn @editValue @index)}} contenteditable="true">{{@note.title}}</h5>
+        <p role="button" name="content" class="card-text" {{on "keyup" (fn @editValue @index)}} contenteditable="true">{{@note.content}}</p>
+        <button type="button" class="btn btn-danger" {{on "click" (fn @onRemoveClick @index)}}>Remove note</button>
+      </div>
+    </div>
+  </div>
+</div>
