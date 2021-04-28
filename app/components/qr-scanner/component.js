@@ -3,7 +3,7 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { later } from '@ember/runloop';
 
-export default class MenuComponent extends Component {
+export default class QrScannerComponent extends Component {
   @tracked cameraId;
   @tracked cameras;
   @tracked result;
