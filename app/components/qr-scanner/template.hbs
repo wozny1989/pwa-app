@@ -1,0 +1,27 @@
+<div class="position-relative">
+  <CodeScanner
+    @device={{this.cameraId}}
+    @onScanSuccess={{this.onScanSuccess}}
+    @onScanError={{this.onScanError}}
+    @onDevicesFound={{this.onCamerasFound}}
+    @onDevicesError={{this.onCamerasError}}
+  />
+
+  {{#if (gt this.cameras.length 1)}}
+    <div class="camera-change-indicator" role="button" {{on "click" this.toggleCamera}}>
+      <FaIcon
+        type="button"
+        @icon="exchange-alt"
+        @size="2x"
+      />
+    </div>
+  {{/if}}
+</div>
+
+<QrScanner::Modal
+  @result={{this.result}}
+  @showModal={{this.showModal}}
+  @isCopied={{this.isCopied}}
+  @onClose={{this.closeModal}}
+  @onCopy={{this.copyToClipboard}}
+/>
