@@ -13,9 +13,9 @@ export default class SpiritLevelComponent extends Component {
     this._setActiveScreen(true);
 
     window.addEventListener('deviceorientation', (event) => {
-      this.beta = event.beta;
-      this.gamma = event.gamma;
-      this.alpha = event.alpha;
+      this.beta = event.beta.toFixed(1);
+      this.gamma = event.gamma.toFixed(1);
+      this.alpha = event.alpha.toFixed(1);
     });
   }
 
