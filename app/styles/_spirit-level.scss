@@ -1,0 +1,29 @@
+.spirit-level-tube {
+  background-color: azure;
+  color: black;
+  position: relative;
+  height: 30px;
+
+  .bubble {
+    position: absolute;
+    width: 50px;
+    height: 22px;
+    left: 50%;
+    bottom: 1px;
+    border-radius: 10px 10px 0 0;
+    background-color: cadetblue;
+    transform: translate(-50%, 0);
+    transition: left 0.5s;
+  }
+
+  .range {
+    width: 56px;
+    height: 30px;
+
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    border-left: solid black 2px;
+    border-right: solid black 2px;
+  }
+}

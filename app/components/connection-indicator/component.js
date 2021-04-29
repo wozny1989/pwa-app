@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 
-export default class MenuComponent extends Component {
+export default class ConnectionIndicatorComponent extends Component {
   @tracked onlineStatus = true;
 
   constructor() {
