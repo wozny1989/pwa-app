@@ -48,6 +48,7 @@
     "ember-data": "~3.26.0",
     "ember-export-application-global": "^2.0.1",
     "ember-fetch": "^8.0.4",
+    "ember-google-maps": "^3.3.3",
     "ember-load-initializers": "^2.1.2",
     "ember-local-storage": "^1.7.2",
     "ember-maybe-import-regenerator": "^0.1.6",
@@ -81,5 +82,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
   }
 }

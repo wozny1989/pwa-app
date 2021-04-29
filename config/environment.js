@@ -1,4 +1,5 @@
 'use strict';
+require('dotenv').config();
 
 module.exports = function (environment) {
   let ENV = {
@@ -6,6 +7,10 @@ module.exports = function (environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    'ember-google-maps': {
+      key: process.env.API_MAPS,
+      libraries: ['geometry', 'places'],
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
