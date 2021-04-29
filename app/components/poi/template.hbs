@@ -1,0 +1,56 @@
+<div class="mb-2 text-center text-muted">
+  <div>Your position:</div>
+
+  <div>
+    Latitude: {{this.lat}}
+  </div>
+
+  <div>
+    Logitude: {{this.lng}}
+  </div>
+</div>
+
+<label {{did-insert this.getMyCord}}>Selleo cordination
+  <input type="checkbox" name="selleoCord" checked={{this.isSelleoCord}} {{on "click" this.toggleCord}}>
+</label>
+
+<GMap
+  @lat={{this.lat}}
+  @lng={{this.lng}}
+  @zoom={{18}}
+  as |map|
+>
+  {{#each this.markers as |marker|}}
+    <map.marker
+      @lat={{marker.lat}}
+      @lng={{marker.lng}}
+      @onClick={{fn this.onClickMarker marker}}
+    />
+  {{/each}}
+
+  {{#if this.isSelleoCord}}
+    <map.circle
+      @lat={{this.lat}}
+      @lng={{this.lng}}
+      @radius={{100}}
+      @fillColor="green"
+      @fillOpacity={{0.3}}
+      @strokeColor="darkgreen"
+      @strokeOpacity={{0.5}}
+      @strokeWeight={{1}}
+    />
+  {{/if}}
+</GMap>
+
+<ul class="list-group mt-3 text-center">
+  {{#each this.markers as |marker|}}
+    <li
+      class="list-group-item
+        {{if (and (eq this.lat marker.lat) (eq this.lng marker.lng)) "active"}}"
+      role="button"
+      {{on "click" (fn this.onClickMarker marker)}}
+    >
+      {{marker.description}}
+    </li>
+  {{/each}}
+</ul>
