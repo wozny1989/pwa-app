@@ -56,7 +56,6 @@ export default class PoiComponent extends Component {
       this.lat = position.coords.latitude;
       this.lng = position.coords.longitude;
       this.isSelleoCord = false;
-      console.log(this.lat, this.lng);
     });
   }
 
